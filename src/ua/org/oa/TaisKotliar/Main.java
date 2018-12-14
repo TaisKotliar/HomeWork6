@@ -74,10 +74,15 @@ public class Main {
 
     public static void testStackOverflowError() {
         try {
-            testStackOverflowError();
+            endlessCyrcle();
         } catch (StackOverflowError ex) {
             System.out.println("Задание 6. Рекурсия");
-            return;
+        }
+    }
+
+    public static void endlessCyrcle() {
+        while (true) {
+            endlessCyrcle();
         }
     }
 
